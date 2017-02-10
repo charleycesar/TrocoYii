@@ -9,7 +9,7 @@ class Troco extends Model
 {
     public $total;
     public $troco = [];
-    
+
     /**
      * @return array the validation rules.
      */
@@ -27,7 +27,7 @@ class Troco extends Model
 
         foreach ($notas as $key => $nota) {
             $qtdNotas = floor( $total / $nota );
-            $this->troco[$nota] = $qtdNotas;
+            $this->troco[$nota] = (int) $qtdNotas;
             $total = $total % $nota;
         }
 
