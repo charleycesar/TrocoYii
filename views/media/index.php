@@ -10,11 +10,11 @@ use yii\widgets\ActiveForm;
 <div class="media-index">
 
     <?php $form = ActiveForm::begin(); ?>
-
+        <?= $model->media; ?>
         <?= $form->field($model, 'nota1') ?>
         <?= $form->field($model, 'nota2') ?>
         <?= $form->field($model, 'nota3') ?>
-    
+
         <div class="form-group">
             <?= Html::submitButton('Submit', ['class' => 'btn btn-primary']) ?>
         </div>
