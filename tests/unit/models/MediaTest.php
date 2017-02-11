@@ -1,8 +1,8 @@
 <?php
 namespace models;
-use app\models\Media;
+use app\models\Boletim;
 
-class MediaTest extends \Codeception\Test\Unit
+class BoletimTest extends \Codeception\Test\Unit
 {
     /**
      * @var \UnitTester
@@ -12,10 +12,8 @@ class MediaTest extends \Codeception\Test\Unit
     // tests
     public function testCalcularMedia()
     {
-        $model = new Media();
-        $model->nota1 = 10;
-        $model->nota2 = 5;
-        $model->nota3 = 3;
+        $model = new Boletim();
+        $model->notas = [ 10, 5, 3];
         $model->calcularMedia();
         $this->assertEquals(6,$model->media);
     }
