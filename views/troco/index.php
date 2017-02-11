@@ -14,9 +14,14 @@ use yii\widgets\ActiveForm;
         <?= $form->field($model, 'total') ?>
 
         <div class="form-group">
-            <?php foreach ($model->troco as $nota => $quantidade) : ?>
-                <?="{$quantidade} nota(s) de {$nota} <br>";?>
-            <?php endforeach; ?>
+            <?php if(sizeof($model->troco)==2): ?>
+                <?php foreach ($model->troco['notas'] as $nota => $quantidade) : ?>
+                    <?="{$quantidade} nota(s) de {$nota} <br>";?>
+                <?php endforeach; ?>
+                <?php foreach ($model->troco['moedas'] as $moeda => $quantidade) : ?>
+                    <?="{$quantidade} moeda(s) de {$moeda} <br>";?>
+                <?php endforeach; ?>
+            <?php endif ?>
             <?= Html::submitButton('Calcular', ['class' => 'btn btn-primary']) ?>
         </div>
     <?php ActiveForm::end(); ?>
