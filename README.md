@@ -17,7 +17,7 @@ Imagine that you work in the cashier of a supermarket. Whenever a customer arriv
 
 For a value of N change how many currencies should you deliver to the customer so that the total currencies are the least possible?
 
-For example, if you have an stock of money of NOTAS = {100,50,20,10,5,2,1}, and need a change equal to N = 28, there are several ways to assemble the combinations:
+For example, if you have an stock of money of NOTAS = {100,50,20,10,5,2,1}, and need a change for 328:
 [100=>3, 20=>1, 5=>1, 2=>2, 1=>1] with a total of 328.
 
 
